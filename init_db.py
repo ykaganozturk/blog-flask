@@ -1,26 +1,17 @@
 import sqlite3
+from werkzeug.security import generate_password_hash
 
-# Veritabanı bağlantısı kur
-connection = sqlite3.connect("database.db")
+connection = sqlite3.connect('database.db')
 
-# schema.sql dosyasını aç ve içeriğini çalıştır
 with open('schema.sql') as f:
     connection.executescript(f.read())
 
-# Cursor oluştur
 cur = connection.cursor()
 
-# Veritabanına ilk gönderiyi ekle
-cur.execute("INSERT INTO posts (title, content) VALUES (?, ?)",
-            ('First Post', 'Content for the first post')
-            )
+# Admin user creation
+hashed_password = generate_password_hash('123456', method='pbkdf2:sha256')
+cur.execute("INSERT INTO user (username, email, password, is_admin) VALUES (?, ?, ?, ?)",
+            ('admin', 'admin@blog.com', hashed_password, 1))
 
-# Veritabanına ikinci gönderiyi ekle
-cur.execute("INSERT INTO posts (title, content) VALUES (?, ?)",
-            ('Second Post', 'Content for the second post')
-            )
-
-# Değişiklikleri kaydet ve bağlantıyı kapat
 connection.commit()
 connection.close()
-
