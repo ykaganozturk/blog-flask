@@ -1,0 +1,87 @@
+/* Genel site ayarları */
+body {
+    background-color: #fff8e1;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Navbar ayarları */
+.navbar {
+    background-color: #ffeb3b; /* Sarı ton */
+    border-bottom: 2px solid #b71c1c; /* Kırmızı ton */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #000 !important; /* Siyah renk */
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    background-color: #d32f2f;
+    border-radius: 4px;
+}
+
+/* Başlık ayarları */
+h1, h2, h3, h4, h5, h6 {
+    color: #b71c1c; /* Kırmızı ton */
+}
+
+/* Düğme ayarları */
+.btn-primary {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+.btn-primary:hover {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+/* Uyarı mesajları */
+.alert-danger {
+    background-color: #ffeb3b;
+    color: #b71c1c;
+    border-color: #b71c1c;
+}
+
+/* Tablo stil ayarları */
+.table {
+    background-color: #fff3e0;
+}
+
+.table thead th {
+    background-color: #b71c1c;
+    color: #ffeb3b;
+}
+
+.table tbody tr:hover {
+    background-color: #ffe0b2;
+}
+
+/* Form ve giriş alanları */
+.form-control {
+    border: 1px solid #b71c1c;
+    background-color: #fff8e1;
+}
+
+.form-control:focus {
+    border-color: #ffeb3b;
+    box-shadow: 0 0 0 0.2rem rgba(255, 235, 59, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: #b71c1c;
+    color: #ffeb3b;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Diğer stil ayarları */
+hr {
+    border-top: 1px solid #b71c1c;
+}
